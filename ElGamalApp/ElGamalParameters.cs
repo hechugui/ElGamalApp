@@ -8,5 +8,6 @@ namespace ElGamalApp
 {
     public class ElGamalParameters
     {
+        public int MyProperty { get; set; }
     }
 }
