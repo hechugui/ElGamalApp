@@ -46,8 +46,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BigInteger.cs" />
-    <Compile Include="DigitsArray.cs" />
     <Compile Include="ElGamal.cs" />
+    <Compile Include="ElGamalAbstractCipher.cs" />
+    <Compile Include="ElGamalDecryptor.cs" />
+    <Compile Include="ElGamalEncryptor.cs" />
+    <Compile Include="ElGamalKeyStruct.cs" />
+    <Compile Include="ElGamalManaged.cs" />
     <Compile Include="ElGamalParameters.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>

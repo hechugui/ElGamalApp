@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace ElGamalApp
 {
-    public class ElGamalParameters
+    [Serializable]
+    public struct ElGamalParameters
     {
-        public int MyProperty { get; set; }
+        public byte[] P;
+        public byte[] G;
+        public byte[] Y;
+        [NonSerialized] public byte[] X;
     }
 }
