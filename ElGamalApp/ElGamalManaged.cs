@@ -153,12 +153,23 @@ namespace ElGamalApp
 
         public override byte[] Sign(byte[] p_hashcode)
         {
-            throw new System.NotImplementedException();
+            if (NeedToGenerateKey())
+            {
+                // we need to create a new key before we can export 
+                CreateKeyPair(KeySizeValue);
+            }
+            return ElGamalSignature.CreateSignature(p_hashcode, o_key_struct);
         }
 
         public override bool VerifySignature(byte[] p_hashcode, byte[] p_signature)
         {
-            throw new System.NotImplementedException();
+            if (NeedToGenerateKey())
+            {
+                // we need to create a new key before we can export 
+                CreateKeyPair(KeySizeValue);
+            }
+            return ElGamalSignature.VerifySignature(p_hashcode,
+              p_signature, o_key_struct);
         }
     }
 }
