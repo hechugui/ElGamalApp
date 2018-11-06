@@ -19,36 +19,37 @@ namespace ElGamalApp
 
         }
 
-        ElGamalKeyStruct e1 = new ElGamalKeyStruct();
-
+        ElGamal x_alg = new ElGamalManaged();
+        ElGamal x_encrypt_alg = new ElGamalManaged();
+        ElGamal x_decrypt_alg = new ElGamalManaged();
+        byte[] x_ciphertext = null;
         private void btnEncrypt_Click(object sender, EventArgs e)
         {
             byte[] x_plaintext
             = Encoding.Default.GetBytes(txtPlainText.Text);
 
             // Create an instance of the algorithm and generate some keys
-            ElGamal x_alg = new ElGamalManaged();
+         
             // set the key size - keep is small to speed up the tests
             x_alg.KeySize = 384;
             // extract and print the xml string (this will cause
             // a new key pair to be generated)
             string x_xml_string = x_alg.ToXmlString(true);
             // Test the basic encryption support
-            ElGamal x_encrypt_alg = new ElGamalManaged();
+            
             // set the keys - note that we export without the
             // private parameters since we are encrypting data
             x_encrypt_alg.FromXmlString(x_alg.ToXmlString(false));
 
-            byte[] x_ciphertext = x_alg.EncryptData(x_plaintext);
+           
+            x_ciphertext = x_alg.EncryptData(x_plaintext);
             //byte[] x_ciphertext = x_alg.EncryptData(x_plaintext);
             lblCipherText.Text = Encoding.UTF8.GetString(x_ciphertext);
-            ElGamal x_decrypt_alg = new ElGamalManaged();
+
+
             // set the keys - note that we export with the
             // private parameters since we are decrypting data
-            x_decrypt_alg.FromXmlString(x_alg.ToXmlString(true));
-            byte[] x_candidate_plaintext = x_decrypt_alg.DecryptData(x_ciphertext);
 
-            lblPlaintext.Text = Encoding.UTF8.GetString(x_candidate_plaintext);
 
         }
 
@@ -70,6 +71,7 @@ namespace ElGamalApp
             byte[] x_signature = x_sign_alg.Sign(x_plaintext);
             // verify the signature
             ElGamal x_verify_alg = new ElGamalManaged();
+            // set the keys - note that we export without the
             // set the keys - note that we export without the
             // private parameters since we are verifying data
             x_verify_alg.FromXmlString(x_alg.ToXmlString(false));
@@ -109,6 +111,14 @@ namespace ElGamalApp
         private void btnVerify_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btDecrypt_Click(object sender, EventArgs e)
+        {
+            x_decrypt_alg.FromXmlString(x_alg.ToXmlString(true));
+            byte[] x_candidate_plaintext = x_decrypt_alg.DecryptData(x_ciphertext);
+
+            lblPlaintext.Text = Encoding.UTF8.GetString(x_candidate_plaintext);
         }
     }
 }
