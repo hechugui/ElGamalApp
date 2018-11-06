@@ -31,7 +31,7 @@ namespace ElGamalApp
             // Create an instance of the algorithm and generate some keys
          
             // set the key size - keep is small to speed up the tests
-            x_alg.KeySize = 384;
+            x_alg.KeySize = int.Parse(cboKeySizes.SelectedValue.ToString());
             // extract and print the xml string (this will cause
             // a new key pair to be generated)
             string x_xml_string = x_alg.ToXmlString(true);
@@ -123,8 +123,20 @@ namespace ElGamalApp
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            cboKeySizes.DataSource = x_alg.LegalKeySizes;
-            cboKeySizes.DisplayMember = "";
+            cboKeySizes.DataSource = getKeySizes();
+        }
+
+        public List<String> getKeySizes()
+        {
+            List<String> keySizesForCbo = new List<string>();
+            KeySizes[] ks = x_alg.LegalKeySizes;
+            int key = ks[0].MinSize;
+            while (key <= ks[0].MaxSize)
+            {
+                keySizesForCbo.Add(key.ToString());
+                key += ks[0].SkipSize;
+            }
+            return keySizesForCbo;
         }
     }
 }

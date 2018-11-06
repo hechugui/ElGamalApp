@@ -38,10 +38,10 @@
             this.btnVerify = new System.Windows.Forms.Button();
             this.btDecrypt = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtCiphertext = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cboKeySizes = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtCiphertext = new System.Windows.Forms.TextBox();
             this.txtDecryptedPlaintext = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -160,6 +160,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Enkriptimi";
             // 
+            // txtCiphertext
+            // 
+            this.txtCiphertext.Location = new System.Drawing.Point(126, 210);
+            this.txtCiphertext.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCiphertext.Multiline = true;
+            this.txtCiphertext.Name = "txtCiphertext";
+            this.txtCiphertext.Size = new System.Drawing.Size(411, 71);
+            this.txtCiphertext.TabIndex = 7;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -190,15 +199,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Dekriptimi";
             // 
-            // txtCiphertext
-            // 
-            this.txtCiphertext.Location = new System.Drawing.Point(126, 210);
-            this.txtCiphertext.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCiphertext.Multiline = true;
-            this.txtCiphertext.Name = "txtCiphertext";
-            this.txtCiphertext.Size = new System.Drawing.Size(411, 71);
-            this.txtCiphertext.TabIndex = 7;
-            // 
             // txtDecryptedPlaintext
             // 
             this.txtDecryptedPlaintext.Location = new System.Drawing.Point(123, 35);
@@ -219,7 +219,7 @@
             this.Controls.Add(this.btnSign);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
-            this.Text = "Form1";
+            this.Text = "ElGamal";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
