@@ -43,48 +43,53 @@
             this.cboKeySizes = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtDecryptedPlaintext = new System.Windows.Forms.TextBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtSignPlaintext = new System.Windows.Forms.TextBox();
+            this.txtSignedPlainText = new System.Windows.Forms.TextBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.pbIsValid = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbIsValid)).BeginInit();
             this.SuspendLayout();
             // 
             // CipherText
             // 
             this.CipherText.AutoSize = true;
             this.CipherText.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CipherText.Location = new System.Drawing.Point(7, 210);
-            this.CipherText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.CipherText.Location = new System.Drawing.Point(5, 171);
             this.CipherText.Name = "CipherText";
-            this.CipherText.Size = new System.Drawing.Size(91, 17);
+            this.CipherText.Size = new System.Drawing.Size(72, 13);
             this.CipherText.TabIndex = 0;
             this.CipherText.Text = "CipherText:";
             // 
             // txtPlainText
             // 
-            this.txtPlainText.Location = new System.Drawing.Point(120, 32);
-            this.txtPlainText.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPlainText.Location = new System.Drawing.Point(90, 26);
             this.txtPlainText.Multiline = true;
             this.txtPlainText.Name = "txtPlainText";
-            this.txtPlainText.Size = new System.Drawing.Size(411, 71);
+            this.txtPlainText.Size = new System.Drawing.Size(309, 58);
             this.txtPlainText.TabIndex = 2;
             // 
             // PlainText
             // 
             this.PlainText.AutoSize = true;
             this.PlainText.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PlainText.Location = new System.Drawing.Point(7, 32);
-            this.PlainText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.PlainText.Location = new System.Drawing.Point(5, 26);
             this.PlainText.Name = "PlainText";
-            this.PlainText.Size = new System.Drawing.Size(80, 17);
+            this.PlainText.Size = new System.Drawing.Size(64, 13);
             this.PlainText.TabIndex = 3;
             this.PlainText.Text = "PlainText:";
             // 
             // btnEncrypt
             // 
             this.btnEncrypt.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEncrypt.Location = new System.Drawing.Point(310, 163);
-            this.btnEncrypt.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEncrypt.Location = new System.Drawing.Point(232, 132);
             this.btnEncrypt.Name = "btnEncrypt";
-            this.btnEncrypt.Size = new System.Drawing.Size(221, 28);
+            this.btnEncrypt.Size = new System.Drawing.Size(166, 23);
             this.btnEncrypt.TabIndex = 4;
             this.btnEncrypt.Text = "Encrypt";
             this.btnEncrypt.UseVisualStyleBackColor = true;
@@ -94,10 +99,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(27, 35);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(20, 28);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 17);
+            this.label2.Size = new System.Drawing.Size(64, 13);
             this.label2.TabIndex = 7;
             this.label2.Text = "PlainText:";
             // 
@@ -111,10 +115,9 @@
             // btnSign
             // 
             this.btnSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSign.Location = new System.Drawing.Point(727, 38);
-            this.btnSign.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSign.Location = new System.Drawing.Point(306, 113);
             this.btnSign.Name = "btnSign";
-            this.btnSign.Size = new System.Drawing.Size(145, 28);
+            this.btnSign.Size = new System.Drawing.Size(109, 23);
             this.btnSign.TabIndex = 8;
             this.btnSign.Text = "Sign";
             this.btnSign.UseVisualStyleBackColor = true;
@@ -123,10 +126,9 @@
             // btnVerify
             // 
             this.btnVerify.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVerify.Location = new System.Drawing.Point(727, 112);
-            this.btnVerify.Margin = new System.Windows.Forms.Padding(4);
+            this.btnVerify.Location = new System.Drawing.Point(246, 59);
             this.btnVerify.Name = "btnVerify";
-            this.btnVerify.Size = new System.Drawing.Size(145, 28);
+            this.btnVerify.Size = new System.Drawing.Size(152, 49);
             this.btnVerify.TabIndex = 9;
             this.btnVerify.Text = "Verify";
             this.btnVerify.UseVisualStyleBackColor = true;
@@ -135,10 +137,9 @@
             // btDecrypt
             // 
             this.btDecrypt.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btDecrypt.Location = new System.Drawing.Point(310, 146);
-            this.btDecrypt.Margin = new System.Windows.Forms.Padding(4);
+            this.btDecrypt.Location = new System.Drawing.Point(232, 119);
             this.btDecrypt.Name = "btDecrypt";
-            this.btDecrypt.Size = new System.Drawing.Size(221, 28);
+            this.btDecrypt.Size = new System.Drawing.Size(166, 23);
             this.btDecrypt.TabIndex = 10;
             this.btDecrypt.Text = "Decrypt";
             this.btDecrypt.UseVisualStyleBackColor = true;
@@ -153,38 +154,41 @@
             this.groupBox1.Controls.Add(this.btnEncrypt);
             this.groupBox1.Controls.Add(this.PlainText);
             this.groupBox1.Controls.Add(this.CipherText);
-            this.groupBox1.Location = new System.Drawing.Point(25, 12);
+            this.groupBox1.Location = new System.Drawing.Point(19, 10);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(558, 302);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(418, 245);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Enkriptimi";
             // 
             // txtCiphertext
             // 
-            this.txtCiphertext.Location = new System.Drawing.Point(126, 210);
-            this.txtCiphertext.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCiphertext.Location = new System.Drawing.Point(94, 171);
             this.txtCiphertext.Multiline = true;
             this.txtCiphertext.Name = "txtCiphertext";
-            this.txtCiphertext.Size = new System.Drawing.Size(411, 71);
+            this.txtCiphertext.Size = new System.Drawing.Size(309, 58);
             this.txtCiphertext.TabIndex = 7;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(120, 119);
+            this.label1.Location = new System.Drawing.Point(90, 97);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(148, 17);
+            this.label1.Size = new System.Drawing.Size(117, 13);
             this.label1.TabIndex = 6;
             this.label1.Text = "Madhesia e çelësit:";
             // 
             // cboKeySizes
             // 
             this.cboKeySizes.FormattingEnabled = true;
-            this.cboKeySizes.Location = new System.Drawing.Point(310, 119);
+            this.cboKeySizes.Location = new System.Drawing.Point(232, 97);
+            this.cboKeySizes.Margin = new System.Windows.Forms.Padding(2);
             this.cboKeySizes.Name = "cboKeySizes";
-            this.cboKeySizes.Size = new System.Drawing.Size(221, 24);
+            this.cboKeySizes.Size = new System.Drawing.Size(167, 21);
             this.cboKeySizes.TabIndex = 5;
             // 
             // groupBox2
@@ -192,32 +196,92 @@
             this.groupBox2.Controls.Add(this.txtDecryptedPlaintext);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.btDecrypt);
-            this.groupBox2.Location = new System.Drawing.Point(25, 320);
+            this.groupBox2.Location = new System.Drawing.Point(19, 260);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(558, 193);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Size = new System.Drawing.Size(418, 157);
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Dekriptimi";
             // 
             // txtDecryptedPlaintext
             // 
-            this.txtDecryptedPlaintext.Location = new System.Drawing.Point(123, 35);
-            this.txtDecryptedPlaintext.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDecryptedPlaintext.Location = new System.Drawing.Point(92, 28);
             this.txtDecryptedPlaintext.Multiline = true;
             this.txtDecryptedPlaintext.Name = "txtDecryptedPlaintext";
-            this.txtDecryptedPlaintext.Size = new System.Drawing.Size(411, 71);
+            this.txtDecryptedPlaintext.Size = new System.Drawing.Size(309, 58);
             this.txtDecryptedPlaintext.TabIndex = 8;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.label3);
+            this.groupBox4.Controls.Add(this.txtSignPlaintext);
+            this.groupBox4.Controls.Add(this.txtSignedPlainText);
+            this.groupBox4.Controls.Add(this.btnSign);
+            this.groupBox4.Location = new System.Drawing.Point(464, 10);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(443, 245);
+            this.groupBox4.TabIndex = 14;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Nenshkrimi";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(16, 23);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(64, 13);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "PlainText:";
+            // 
+            // txtSignPlaintext
+            // 
+            this.txtSignPlaintext.Location = new System.Drawing.Point(106, 23);
+            this.txtSignPlaintext.Multiline = true;
+            this.txtSignPlaintext.Name = "txtSignPlaintext";
+            this.txtSignPlaintext.Size = new System.Drawing.Size(309, 58);
+            this.txtSignPlaintext.TabIndex = 8;
+            // 
+            // txtSignedPlainText
+            // 
+            this.txtSignedPlainText.Location = new System.Drawing.Point(106, 171);
+            this.txtSignedPlainText.Multiline = true;
+            this.txtSignedPlainText.Name = "txtSignedPlainText";
+            this.txtSignedPlainText.Size = new System.Drawing.Size(309, 58);
+            this.txtSignedPlainText.TabIndex = 10;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.pbIsValid);
+            this.groupBox3.Controls.Add(this.btnVerify);
+            this.groupBox3.Location = new System.Drawing.Point(464, 262);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(443, 155);
+            this.groupBox3.TabIndex = 15;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Verify Signature";
+            // 
+            // pbIsValid
+            // 
+            this.pbIsValid.Image = global::ElGamalApp.Properties.Resources.InValid;
+            this.pbIsValid.Location = new System.Drawing.Point(19, 19);
+            this.pbIsValid.Name = "pbIsValid";
+            this.pbIsValid.Size = new System.Drawing.Size(159, 121);
+            this.pbIsValid.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbIsValid.TabIndex = 11;
+            this.pbIsValid.TabStop = false;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1161, 520);
+            this.ClientSize = new System.Drawing.Size(932, 431);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btnVerify);
-            this.Controls.Add(this.btnSign);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
             this.Text = "ElGamal";
             this.Load += new System.EventHandler(this.MainForm_Load);
@@ -225,6 +289,10 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbIsValid)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -246,6 +314,12 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtCiphertext;
         private System.Windows.Forms.TextBox txtDecryptedPlaintext;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtSignPlaintext;
+        private System.Windows.Forms.TextBox txtSignedPlainText;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.PictureBox pbIsValid;
     }
 }
 
