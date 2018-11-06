@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace ElGamalApp
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
 
@@ -44,7 +44,7 @@ namespace ElGamalApp
            
             x_ciphertext = x_alg.EncryptData(x_plaintext);
             //byte[] x_ciphertext = x_alg.EncryptData(x_plaintext);
-            lblCipherText.Text = Encoding.UTF8.GetString(x_ciphertext);
+            txtCiphertext.Text = Encoding.UTF8.GetString(x_ciphertext);
 
 
             // set the keys - note that we export with the
@@ -55,7 +55,7 @@ namespace ElGamalApp
 
         private void btnSign_Click(object sender, EventArgs e)
         {
-            byte[] x_plaintext = Encoding.UTF8.GetBytes(lblPlaintext.Text);
+            byte[] x_plaintext = Encoding.UTF8.GetBytes(txtPlainText.Text);
             // Create an instance of the algorithm and generate some keys
             ElGamal x_alg = new ElGamalManaged();
             // set the key size - keep is small to speed up the tests
@@ -118,7 +118,13 @@ namespace ElGamalApp
             x_decrypt_alg.FromXmlString(x_alg.ToXmlString(true));
             byte[] x_candidate_plaintext = x_decrypt_alg.DecryptData(x_ciphertext);
 
-            lblPlaintext.Text = Encoding.UTF8.GetString(x_candidate_plaintext);
+            txtDecryptedPlaintext.Text = Encoding.UTF8.GetString(x_candidate_plaintext);
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            cboKeySizes.DataSource = x_alg.LegalKeySizes;
+            cboKeySizes.DisplayMember = "";
         }
     }
 }
