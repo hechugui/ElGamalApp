@@ -44,7 +44,7 @@ namespace ElGamalApp
             Array.Copy(x_b_bytes, 0, x_result, x_result_size
                 - x_b_bytes.Length, x_b_bytes.Length);
 
-            // return the result array
+            // return the result array ..
             return x_result;
         }
         public static bool VerifySignature(byte[] p_data, byte[] p_sig, ElGamalKeyStruct p_key_struct)
