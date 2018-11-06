@@ -99,7 +99,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(20, 28);
+            this.label2.Location = new System.Drawing.Point(8, 73);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 13);
             this.label2.TabIndex = 7;
@@ -115,9 +115,9 @@
             // btnSign
             // 
             this.btnSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSign.Location = new System.Drawing.Point(306, 113);
+            this.btnSign.Location = new System.Drawing.Point(263, 102);
             this.btnSign.Name = "btnSign";
-            this.btnSign.Size = new System.Drawing.Size(109, 23);
+            this.btnSign.Size = new System.Drawing.Size(152, 46);
             this.btnSign.TabIndex = 8;
             this.btnSign.Text = "Sign";
             this.btnSign.UseVisualStyleBackColor = true;
@@ -126,7 +126,7 @@
             // btnVerify
             // 
             this.btnVerify.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVerify.Location = new System.Drawing.Point(246, 59);
+            this.btnVerify.Location = new System.Drawing.Point(263, 80);
             this.btnVerify.Name = "btnVerify";
             this.btnVerify.Size = new System.Drawing.Size(152, 49);
             this.btnVerify.TabIndex = 9;
@@ -137,7 +137,7 @@
             // btDecrypt
             // 
             this.btDecrypt.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btDecrypt.Location = new System.Drawing.Point(232, 119);
+            this.btDecrypt.Location = new System.Drawing.Point(237, 18);
             this.btDecrypt.Name = "btDecrypt";
             this.btDecrypt.Size = new System.Drawing.Size(166, 23);
             this.btDecrypt.TabIndex = 10;
@@ -207,7 +207,7 @@
             // 
             // txtDecryptedPlaintext
             // 
-            this.txtDecryptedPlaintext.Location = new System.Drawing.Point(92, 28);
+            this.txtDecryptedPlaintext.Location = new System.Drawing.Point(94, 73);
             this.txtDecryptedPlaintext.Multiline = true;
             this.txtDecryptedPlaintext.Name = "txtDecryptedPlaintext";
             this.txtDecryptedPlaintext.Size = new System.Drawing.Size(309, 58);
@@ -266,9 +266,9 @@
             // pbIsValid
             // 
             this.pbIsValid.Image = global::ElGamalApp.Properties.Resources.InValid;
-            this.pbIsValid.Location = new System.Drawing.Point(19, 19);
+            this.pbIsValid.Location = new System.Drawing.Point(106, 48);
             this.pbIsValid.Name = "pbIsValid";
-            this.pbIsValid.Size = new System.Drawing.Size(159, 121);
+            this.pbIsValid.Size = new System.Drawing.Size(107, 81);
             this.pbIsValid.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbIsValid.TabIndex = 11;
             this.pbIsValid.TabStop = false;

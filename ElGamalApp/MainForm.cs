@@ -75,17 +75,6 @@ namespace ElGamalApp
             txtSignedPlainText.Text = Encoding.UTF8.GetString(x_signature);
             // verify the signature
         }
-        private static bool CompareArrays(byte[] p_arr1, byte[] p_arr2)
-        {
-            for (int i = 0; i < p_arr1.Length; i++)
-            {
-                if (p_arr1[i] != p_arr2[i])
-                {
-                    return false;
-                }
-            }
-            return true;
-        }
 
         private void btnVerify_Click(object sender, EventArgs e)
         {

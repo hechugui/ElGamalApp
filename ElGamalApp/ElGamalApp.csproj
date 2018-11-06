@@ -159,10 +159,7 @@
     <Compile Include="ElGamalKeyStruct.cs" />
     <Compile Include="ElGamalManaged.cs" />
     <Compile Include="ElGamalParameters.cs" />
-    <Compile Include="ElGamalPKCS1SignatureDeformatter.cs" />
-    <Compile Include="ElGamalPKCS1SignatureFormatter.cs" />
     <Compile Include="ElGamalSignature.cs" />
-    <Compile Include="ElGamalSignatureFormatHelper.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
