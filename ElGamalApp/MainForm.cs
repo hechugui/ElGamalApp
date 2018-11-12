@@ -26,32 +26,17 @@ namespace ElGamalApp
         byte[] x_ciphertext = null;
         private void btnEncrypt_Click(object sender, EventArgs e)
         {
-            byte[] x_plaintext
-            = Encoding.Default.GetBytes(txtPlainText.Text);
-
-            // Create an instance of the algorithm and generate some keys
-         
-            // set the key size - keep is small to speed up the tests
+            byte[] x_plaintext = Encoding.UTF8.GetBytes(txtPlainText.Text);
+   
             x_alg.KeySize = int.Parse(cboKeySizes.SelectedValue.ToString());
-            // extract and print the xml string (this will cause
-            // a new key pair to be generated)
+
             string x_xml_string = x_alg.ToXmlString(true);
-            // Test the basic encryption support
-            
-            // set the keys - note that we export without the
-            // private parameters since we are encrypting data
+   
             x_encrypt_alg.FromXmlString(x_alg.ToXmlString(false));
 
-           
             x_ciphertext = x_alg.EncryptData(x_plaintext);
-            //byte[] x_ciphertext = x_alg.EncryptData(x_plaintext);
-            txtCiphertext.Text = Encoding.UTF8.GetString(x_ciphertext);
 
-
-            // set the keys - note that we export with the
-            // private parameters since we are decrypting data
-
-
+            txtCiphertext.Text = Convert.ToBase64String(x_ciphertext);
         }
 
         byte[] x_plaintextForSignature = null,x_signature = null;
@@ -59,21 +44,16 @@ namespace ElGamalApp
         private void btnSign_Click(object sender, EventArgs e)
         {
             x_plaintextForSignature = Encoding.UTF8.GetBytes(txtSignPlaintext.Text);
-            // Create an instance of the algorithm and generate some keys
-          
-            // set the key size - keep is small to speed up the tests
+
             x_alg_signature.KeySize = int.Parse(cboKeySizes.SelectedValue.ToString());
-            // extract and print the xml string (this will cause
-            // a new key pair to be generated)
+
             string x_xml_string = x_alg_signature.ToXmlString(true);
 
             ElGamal x_sign_alg = new ElGamalManaged();
-            // set the keys - note that we export with the
-            // private parameters since we are signing data
+
             x_sign_alg.FromXmlString(x_alg_signature.ToXmlString(true));
             x_signature = x_sign_alg.Sign(x_plaintextForSignature);
-            txtSignedPlainText.Text = Encoding.UTF8.GetString(x_signature);
-            // verify the signature
+            txtSignedPlainText.Text = Convert.ToBase64String(x_signature);
         }
 
         private void btnVerify_Click(object sender, EventArgs e)
