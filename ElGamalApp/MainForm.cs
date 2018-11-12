@@ -9,6 +9,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace ElGamalApp
 {
@@ -24,14 +25,15 @@ namespace ElGamalApp
         ElGamal x_encrypt_alg = new ElGamalManaged();
         ElGamal x_decrypt_alg = new ElGamalManaged();
         byte[] x_ciphertext = null;
+        string x_xml_string_encryption,x_xml_string_signature;
         private void btnEncrypt_Click(object sender, EventArgs e)
         {
             byte[] x_plaintext = Encoding.UTF8.GetBytes(txtPlainText.Text);
    
             x_alg.KeySize = int.Parse(cboKeySizes.SelectedValue.ToString());
 
-            string x_xml_string = x_alg.ToXmlString(true);
-   
+            x_xml_string_encryption = x_alg.ToXmlString(true);
+
             x_encrypt_alg.FromXmlString(x_alg.ToXmlString(false));
 
             x_ciphertext = x_alg.EncryptData(x_plaintext);
@@ -47,7 +49,7 @@ namespace ElGamalApp
 
             x_alg_signature.KeySize = int.Parse(cboKeySizes.SelectedValue.ToString());
 
-            string x_xml_string = x_alg_signature.ToXmlString(true);
+            x_xml_string_signature = x_alg_signature.ToXmlString(true);
 
             ElGamal x_sign_alg = new ElGamalManaged();
 
@@ -93,6 +95,17 @@ namespace ElGamalApp
             pbIsValid.Visible = false;
         }
 
+        private void btnShowKeys_Click(object sender, EventArgs e)
+        {
+            Details dt = new Details(x_xml_string_encryption);
+            dt.Show();
+        }
+
+        private void btnShowDetailsSignature_Click(object sender, EventArgs e)
+        {
+            Details dt = new Details(x_xml_string_signature);
+            dt.Show();
+        }
 
         public List<String> getKeySizes()
         {

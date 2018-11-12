@@ -38,6 +38,7 @@
             this.btnVerify = new System.Windows.Forms.Button();
             this.btDecrypt = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnShowKeys = new System.Windows.Forms.Button();
             this.txtCiphertext = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cboKeySizes = new System.Windows.Forms.ComboBox();
@@ -49,6 +50,7 @@
             this.txtSignedPlainText = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.pbIsValid = new System.Windows.Forms.PictureBox();
+            this.btnShowDetailsSignature = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -87,9 +89,9 @@
             // btnEncrypt
             // 
             this.btnEncrypt.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEncrypt.Location = new System.Drawing.Point(232, 132);
+            this.btnEncrypt.Location = new System.Drawing.Point(237, 132);
             this.btnEncrypt.Name = "btnEncrypt";
-            this.btnEncrypt.Size = new System.Drawing.Size(166, 23);
+            this.btnEncrypt.Size = new System.Drawing.Size(161, 23);
             this.btnEncrypt.TabIndex = 4;
             this.btnEncrypt.Text = "Encrypt";
             this.btnEncrypt.UseVisualStyleBackColor = true;
@@ -147,6 +149,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnShowKeys);
             this.groupBox1.Controls.Add(this.txtCiphertext);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.cboKeySizes);
@@ -163,12 +166,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Enkriptimi";
             // 
+            // btnShowKeys
+            // 
+            this.btnShowKeys.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShowKeys.Location = new System.Drawing.Point(90, 132);
+            this.btnShowKeys.Name = "btnShowKeys";
+            this.btnShowKeys.Size = new System.Drawing.Size(141, 23);
+            this.btnShowKeys.TabIndex = 8;
+            this.btnShowKeys.Text = "Show";
+            this.btnShowKeys.UseVisualStyleBackColor = true;
+            this.btnShowKeys.Click += new System.EventHandler(this.btnShowKeys_Click);
+            // 
             // txtCiphertext
             // 
-            this.txtCiphertext.Location = new System.Drawing.Point(94, 171);
+            this.txtCiphertext.Location = new System.Drawing.Point(90, 171);
             this.txtCiphertext.Multiline = true;
             this.txtCiphertext.Name = "txtCiphertext";
-            this.txtCiphertext.Size = new System.Drawing.Size(309, 58);
+            this.txtCiphertext.Size = new System.Drawing.Size(313, 58);
             this.txtCiphertext.TabIndex = 7;
             // 
             // label1
@@ -185,10 +199,10 @@
             // cboKeySizes
             // 
             this.cboKeySizes.FormattingEnabled = true;
-            this.cboKeySizes.Location = new System.Drawing.Point(232, 97);
+            this.cboKeySizes.Location = new System.Drawing.Point(237, 97);
             this.cboKeySizes.Margin = new System.Windows.Forms.Padding(2);
             this.cboKeySizes.Name = "cboKeySizes";
-            this.cboKeySizes.Size = new System.Drawing.Size(167, 21);
+            this.cboKeySizes.Size = new System.Drawing.Size(162, 21);
             this.cboKeySizes.TabIndex = 5;
             // 
             // groupBox2
@@ -207,14 +221,15 @@
             // 
             // txtDecryptedPlaintext
             // 
-            this.txtDecryptedPlaintext.Location = new System.Drawing.Point(94, 73);
+            this.txtDecryptedPlaintext.Location = new System.Drawing.Point(90, 73);
             this.txtDecryptedPlaintext.Multiline = true;
             this.txtDecryptedPlaintext.Name = "txtDecryptedPlaintext";
-            this.txtDecryptedPlaintext.Size = new System.Drawing.Size(309, 58);
+            this.txtDecryptedPlaintext.Size = new System.Drawing.Size(313, 58);
             this.txtDecryptedPlaintext.TabIndex = 8;
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.btnShowDetailsSignature);
             this.groupBox4.Controls.Add(this.label3);
             this.groupBox4.Controls.Add(this.txtSignPlaintext);
             this.groupBox4.Controls.Add(this.txtSignedPlainText);
@@ -273,6 +288,17 @@
             this.pbIsValid.TabIndex = 11;
             this.pbIsValid.TabStop = false;
             // 
+            // btnShowDetailsSignature
+            // 
+            this.btnShowDetailsSignature.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShowDetailsSignature.Location = new System.Drawing.Point(106, 102);
+            this.btnShowDetailsSignature.Name = "btnShowDetailsSignature";
+            this.btnShowDetailsSignature.Size = new System.Drawing.Size(142, 46);
+            this.btnShowDetailsSignature.TabIndex = 9;
+            this.btnShowDetailsSignature.Text = "Show";
+            this.btnShowDetailsSignature.UseVisualStyleBackColor = true;
+            this.btnShowDetailsSignature.Click += new System.EventHandler(this.btnShowDetailsSignature_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -320,6 +346,8 @@
         private System.Windows.Forms.TextBox txtSignedPlainText;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.PictureBox pbIsValid;
+        private System.Windows.Forms.Button btnShowKeys;
+        private System.Windows.Forms.Button btnShowDetailsSignature;
     }
 }
 
