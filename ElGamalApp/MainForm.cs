@@ -32,7 +32,7 @@ namespace ElGamalApp
    
             x_alg.KeySize = int.Parse(cboKeySizes.SelectedValue.ToString());
 
-            x_xml_string_encryption = x_alg.ToXmlString(true);
+            x_xml_string_encryption = x_alg.ToXmlString(false);
 
             x_encrypt_alg.FromXmlString(x_alg.ToXmlString(false));
 
