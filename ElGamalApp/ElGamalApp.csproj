@@ -166,6 +166,7 @@
     <Compile Include="ElGamalManaged.cs" />
     <Compile Include="ElGamalParameters.cs" />
     <Compile Include="ElGamalSignature.cs" />
+    <Compile Include="ElGamalSignatureFormatHelper.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
